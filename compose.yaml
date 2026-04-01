@@ -2,9 +2,9 @@ services:
   artman:
     build:
       context: artman
-      dockerfile: artman/dockerfile
+      dockerfile: dockerfile
     volumes:
-      - artman/:/app
+      - ./artman/:/app
     network_mode: host
     restart: always
   
@@ -12,5 +12,7 @@ services:
     image: averyout48/qlc-plus-docker
     depends_on:
       - artman
+    volumes:
+      - ./qlc-configs/active.qxw:/QLC/qlc.qxw
     ports:
       - "80:9999"
