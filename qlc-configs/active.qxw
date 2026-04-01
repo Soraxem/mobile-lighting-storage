@@ -3,33 +3,47 @@
 <Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="InputOutputManager">
  <Creator>
   <Name>Q Light Controller Plus</Name>
-  <Version>4.14.3</Version>
-  <Author>Samuel Hafen</Author>
+  <Version>4.14.4</Version>
+  <Author></Author>
  </Creator>
  <Engine>
   <InputOutputMap>
    <BeatGenerator BeatType="Disabled" BPM="0"/>
-   <Universe Name="Unused" ID="0"/>
-   <Universe Name="1 Spots" ID="1">
-    <Output Plugin="ArtNet" UID="172.18.0.1" Line="2"/>
+   <NetworkServer Type="Native" AutoStart="False" Name="" Password=""/>
+   <Universe Name="1 Spots" ID="0">
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="1"/>
+    </Output>
    </Universe>
-   <Universe Name="2 Moving" ID="2">
-    <Output Plugin="ArtNet" UID="172.18.0.1" Line="2"/>
+   <Universe Name="2 Moving" ID="1">
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="2"/>
+    </Output>
+   </Universe>
+   <Universe Name="3 Special" ID="2">
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="3"/>
+    </Output>
    </Universe>
    <Universe Name="3 Special" ID="3">
-    <Output Plugin="ArtNet" UID="172.18.0.2" Line="2"/>
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="4"/>
+    </Output>
    </Universe>
    <Universe Name="4 Reserve" ID="4">
-    <Output Plugin="ArtNet" UID="172.18.0.2" Line="2"/>
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="5"/>
+    </Output>
    </Universe>
    <Universe Name="5 Stringlights" ID="5">
-    <Output Plugin="ArtNet" UID="172.18.0.2" Line="2"/>
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="6"/>
+    </Output>
    </Universe>
    <Universe Name="Universe 7" ID="6">
-    <Output Plugin="ArtNet" UID="172.18.0.2" Line="2"/>
-   </Universe>
-   <Universe Name="Universe 8" ID="7">
-    <Output Plugin="ArtNet" UID="172.18.0.2" Line="2"/>
+    <Output Plugin="ArtNet" UID="172.55.0.2" Line="1">
+     <PluginParameters outputIP="172.55.0.1" outputUni="7"/>
+    </Output>
    </Universe>
   </InputOutputMap>
   <Fixture>

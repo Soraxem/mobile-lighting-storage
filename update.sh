@@ -5,4 +5,4 @@ sudo docker compose down
 git pull origin main
 git submodule update --init --recursive
 
-sudo docker compose up
+sudo docker compose up -d
