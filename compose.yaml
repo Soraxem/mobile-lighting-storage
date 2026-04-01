@@ -7,7 +7,10 @@ services:
       - ./artman/:/app
     network_mode: host
     restart: always
-  
+    networks:
+      network:
+        ipv4_address: 172.18.0.2
+
   qlc-plus:
     image: averyout48/qlc-plus-docker
     depends_on:
@@ -17,3 +20,12 @@ services:
     ports:
       - "80:9999"
     restart: always
+    networks:
+      network:
+        ipv4_address: 172.18.0.3
+networks:
+  network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/24
