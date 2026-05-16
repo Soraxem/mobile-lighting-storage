@@ -8,30 +8,3 @@ services:
     network_mode: host
     restart: unless-stopped
 
-  qlcplus:
-    image: scotttag/qlcplus-docker
-    ports:
-      - "5800:5800"  # Web interface
-      - "5900:5900"  # VNC
-      - "80:9999"  # QLC+ web server
-    volumes:
-      - ./qlc-configs:/data:rw
-      - ./qlc-fixtures:/root/.qlcplus/fixtures:ro
-    environment:
-      - QLC_WEB_SERVER=true
-      - WORKSPACE_FILE=/data/active.qxw
-      - OPERATE_MODE=true 
-    restart: unless-stopped
-    networks:
-      network:
-        ipv4_address: 172.55.0.2
-
-volumes:
-  qlcplus-data:
-networks:
-  network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.55.0.0/24
-
